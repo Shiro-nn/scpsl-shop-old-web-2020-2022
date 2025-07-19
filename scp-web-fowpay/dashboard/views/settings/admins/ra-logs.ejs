@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <base href="https://scpsl.store">
+        <%- include('../../modules/meta', {embedName:'fydne', metaTitle:'fydne | Логи действий', metaDesc:'Логи действий'}) %>
+        <link rel="stylesheet" type="text/css" href="<%= cdn_host %>/scpsl.store/css/ra-logs.css">
+    </head>
+    <body>
+        <div class="chatlog" id="LoadLogs"></div>
+        <button class="ra_button" id="load_logs">Загрузить логи</button>
+        <button class="ra_button" id="load_all_logs">Загрузить все логи</button>
+        <div id="deleteThis" style="display: none;"><%- JSON.stringify(logs).replaceAll('<', '&lt;').replaceAll('>', '&gt;') %></div>
+        <%- include('../../modules/socketInit') %>
+        <script src="<%= cdn_host %>/scpsl.store/js/jquery/jquery.min.js"></script>
+        <script src="<%= cdn_host %>/scpsl.store/js/md.js"></script>
+        <script src="/js/etc/load-logs.js"></script>
+        <%- include('../../modules/profile') %>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+const mongoose = require("mongoose"),
+Schema = mongoose.Schema,
+config = require("../config.js");
+module.exports = mongoose.model("accounts", new Schema({
+    email: { type: String, default: '' },
+    id: { type: Number, default: 0 },
+    user: { type: String, default: '' },
+    pass: { type: String, default: '' },
+    verified: { type: Boolean, default: false },
+    date: { type: String, default: '' },
+    balance: { type: Number, default: 0 },
+    avatar: { type: String, default: `${config.dashboard.cdn}/scpsl.store/users/avatars/unknow.png` },
+    banner: { type: String, default: '' },
+    name: { type: String, default: '' },
+    clan: { type: String, default: '' },
+    style: { type: Number, default: 0 },
+    steam: { type: String, default: '' },
+    discord: { type: String, default: '' },
+    prefix: { type: String, default: '' },
+    achievements: { type: Array, default: [] },
+    ips: { type: Array, default: [] },
+
+    ip: { type: String, default: '' },
+    cookie: { type: String, default: '' },
+    passKey: { type: String, default: '' },
+    time: { type: String, default: 'Нет данных' },
+}));

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <%- include('../../modules/meta', {embedName:'fydne', metaTitle:'fydne | Администрация', metaDesc:'Администрация'}) %>
+        <link href="<%= cdn_host %>/scpsl.store/css/app.min.css" rel="stylesheet" type="text/css">
+        <link href="<%= cdn_host %>/scpsl.store/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="/css/etc/settings.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/custom_style.css?fix=.css">
+        <link rel="stylesheet" href="<%= cdn_host %>/scpsl.store/css/font-awesome.min.css">
+    </head>
+    <body class="topbar-dark left-side-menu-dark pace-done">
+        <%- include('../../modules/socketInit') %>
+        <script>const aid = parseInt('<%- aid %>');</script>
+        <div id="wrapper">
+            <%- include('../../modules/header') %>
+            <%- include('../../modules/panel') %>
+            <div class="content-page">
+                <div class="content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-4" style="-webkit-box-flex: 0; -ms-flex: 0 0 66.66666%; flex: 0 0 66.66666%; max-width: 66.66666%;">
+                                <div class="card" style="max-height: 555px !important; overflow:auto;">
+                                    <div class="card-header">Логи</div>
+                                    <iframe src="<%=ra%>" style="min-height: 500px; max-height: 500px !important;"></iframe>
+                                </div>
+                            </div>
+                            <div class="col-md-4" style="z-index: 2;">
+                                <div class="card">
+                                    <div class="card-header" id="admins.count">Админы</div><br>
+                                    <div style="max-height: 447px !important; max-width: 500px !important; overflow:auto;">
+                                        <div id="admins.list"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include('../../modules/invite') %>
+        <script src="<%= cdn_host %>/scpsl.store/js/jquery/jquery.min.js"></script>
+        <%- include('../../modules/discord') %>
+        <%- include('../../modules/profile') %>
+        <script src="<%= cdn_host %>/scpsl.store/js/slimscroll.min.js"></script>
+        <script src="<%= cdn_host %>/scpsl.store/js/app.js"></script>
+        <script src="/js/etc/load-ra-logs.js"></script>
+        <script src="/js/render/admins/list.js"></script>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+    <%- include('../modules/meta', {embedName:'fydne', metaTitle:'fydne | Донат', metaDesc:'Донат'}) %>
+    
+    <link rel="stylesheet" href="/css/donate/main.css">
+    
+    <link href="<%= cdn_host %>/scpsl.store/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="<%= cdn_host %>/scpsl.store/css/app.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="<%= cdn_host %>/scpsl.store/css/colors.min.css">
+    <link rel="stylesheet" href="<%= cdn_host %>/scpsl.store/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/custom_style.css?fix=.css">
+    </head>
+    <body>
+        <%- include('../modules/socketInit') %>
+        <%- include('../modules/header') %>
+        <div class="q1">
+            <div class="q1-1">
+                <a class="q2" href="/donate/ra">
+                    <p class="q5">Сборка админки</p>
+                    <hr class="q4">
+                    <img class="q3" src="/img/donate/ra.png">
+                </a>
+                <a class="q2" href="/donate/customize">
+                    <p class="q5">Кастомизация</p>
+                    <hr class="q4">
+                    <img class="q3" src="/img/donate/customize.png">
+                </a>
+            </div>
+            <br>
+            <div class="q1-2">
+                <a class="q2" href="/donate/roles">
+                    <img class="q3" src="/img/donate/roles.png">
+                    <hr class="q4">
+                    <p class="q5">Готовые роли</p>
+                </a>
+                <a class="q2" href="/donate/visual">
+                    <img class="q3" src="/img/donate/soon.png">
+                    <hr class="q4">
+                    <p class="q5">Визуал</p>
+                </a>
+            </div>
+        </div>
+        <%- include('../modules/invite') %>
+    </body>
+</html>

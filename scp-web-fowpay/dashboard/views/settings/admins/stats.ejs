@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <%- include('../../modules/meta', {embedName:'fydne', metaTitle:'fydne | Статистика Администрации', metaDesc:'Статистика Администрации'}) %>
+        <link href="<%= cdn_host %>/scpsl.store/css/app.min.css" rel="stylesheet" type="text/css">
+        <link href="<%= cdn_host %>/scpsl.store/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="/css/etc/settings.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/custom_style.css?fix=.css">
+        <link rel="stylesheet" href="<%= cdn_host %>/scpsl.store/css/font-awesome.min.css">
+    </head>
+    <body class="topbar-dark left-side-menu-dark pace-done">
+        <%- include('../../modules/socketInit') %>
+        <script>const aid = parseInt('<%- aid %>');</script>
+        <div id="wrapper">
+            <%- include('../../modules/header') %>
+            <%- include('../../modules/panel') %>
+            <div class="content-page">
+                <div class="content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card" id="admin.stats.role"></div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card" id="admin.stats.time"></div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card" id="admin.stats.work"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include('../../modules/invite') %>
+        <script src="<%= cdn_host %>/scpsl.store/js/jquery/jquery.min.js"></script>
+        <script src="<%= cdn_host %>/scpsl.store/js/slimscroll.min.js"></script>
+        <script src="<%= cdn_host %>/scpsl.store/js/app.js"></script>
+        <script src="/js/render/admins/stats.js"></script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <%- include('../../modules/meta', {embedName:'fydne', metaTitle:'fydne | Ограничения донатеров', metaDesc:'Ограничения донатеров'}) %>
+    <link rel="stylesheet" href="/css/donate/ra_three.css">
+    <link rel="stylesheet" href="/css/donate/ra_two.css">
+    <link href="<%= cdn_host %>/scpsl.store/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="<%= cdn_host %>/scpsl.store/css/app.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/custom_style.css?fix=.css">
+    <link rel="stylesheet" href="<%= cdn_host %>/scpsl.store/css/font-awesome.min.css">
+    </head>
+    <body>
+        <%- include('../../modules/socketInit') %>
+        <div id="wrapper">
+            <%- include('../../modules/header') %>
+            <div class="content">
+                <div class="content-page ml-0">
+                    <div class="content">
+                        <div class="modal-dialog modal-xl">
+                            <%- include('index') %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <%- include('../../modules/invite') %>
+        </div>
+        <script src="/js/etc/rules_frame.js"></script>
+    </body>
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html style="background-color: #161b2d;">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta name="description" content="fydne — это проект новой эры">
+<meta name="author" content="fydne">
+<meta name="keywords" content="scpsl store, store scpsl, scp:sl, SCP: Secret Laboratory">
+<title>fydne</title>
+
+<link rel="icon" type="image/ico" href="https://static-worker.scpsl.shop/bin/fydne.png" />
+
+<script>
+window.addEventListener('keydown',(e)=>{if(e.code=='F12'){e.preventDefault();return false;}
+if(e.ctrlKey&&e.shiftKey&&e.code=='KeyI'){e.preventDefault();return false;}
+if(e.ctrlKey&&e.shiftKey&&e.code=='KeyJ'){e.preventDefault();return false;}
+if(e.ctrlKey&&e.shiftKey&&e.code=='KeyC'){e.preventDefault();return false;}
+if(e.ctrlKey&&e.shiftKey&&e.code=='KeyM'){e.preventDefault();return false;}
+if(e.ctrlKey&&e.code=='KeyU'){e.preventDefault();return false;}
+if(e.ctrlKey&&e.code=='KeyS'){e.preventDefault();return false;}
+if(e.ctrlKey&&e.code=='KeyP'){e.preventDefault();return false;}});document.onkeydown=function(e){if(window.event.keyCode==123){return false;}
+if(e.button==2){return false;}
+if(e.ctrlKey&&e.shiftKey&&window.event.keyCode=='I'.charCodeAt(0)){return false;}
+if(e.ctrlKey&&e.shiftKey&&window.event.keyCode=='J'.charCodeAt(0)){return false;}
+if(e.ctrlKey&&e.shiftKey&&window.event.keyCode=='C'.charCodeAt(0)){return false;}
+if(e.ctrlKey&&e.shiftKey&&window.event.keyCode=='M'.charCodeAt(0)){return false;}
+if(e.ctrlKey&&window.event.keyCode=='U'.charCodeAt(0)){return false;}
+if(e.ctrlKey&&window.event.keyCode=='S'.charCodeAt(0)){return false;}
+if(e.ctrlKey&&window.event.keyCode=='P'.charCodeAt(0)){return false;}}
+window.addEventListener("load",()=>{try{document.getElementById("wm-ipp-base").outerHTML=''}catch{}});window.addEventListener('dragstart',(e)=>{try{if(e.target.tagName=='A')return;}catch{}e.preventDefault()},false);window.addEventListener('cut',(e)=>{try{if(e.target.tagName=='TEXTAREA')return;}catch{}e.preventDefault()},false);document.oncontextmenu=()=>false;window.addEventListener('contextmenu',(e)=>e.preventDefault(),false);document.ondrop=()=>false;window.addEventListener('drop',(e)=>e.preventDefault(),false);window.addEventListener('load',()=>{if('serviceWorker'in navigator){navigator.serviceWorker.register('https://'+window.location.host+'/service-worker.js');}});
+</script>
+
+<style>
+::-webkit-scrollbar{height:.072916667in}::-webkit-scrollbar{width:.4375pc}::-webkit-scrollbar-thumb{border-radius:74.25pt}::-webkit-scrollbar-thumb{background:0 0}::-webkit-scrollbar-thumb{box-shadow:0 0 0 100000vh #161b2d}::-webkit-scrollbar-track{background:linear-gradient(0deg,#ff2323 0%,#d445ff 100%)}*,*::before,*::after{box-sizing:border-box}::-moz-selection{color:#be1c6d;background:#00000040;border-radius:15px}::selection{color:#be1c6d;background:#00000040}img{user-select:none}body{margin:0;position:relative;display:flex;font-family:nunito,sans-serif}@media(min-width:576px){#render{max-width:540px}}@media(min-width:768px){#render{max-width:720px}}@media(min-width:992px){#render{max-width:960px}}@media(min-width:1200px){#render{max-width:1040px}}@media(min-width:1500px){#render{max-width:1570px}}#render{position:relative;display:flex;margin:150px auto;width:100%;justify-items:center;justify-content:center;flex-direction:column}.preview{display:grid;width:100%;justify-items:center;justify-content:center;grid-template-columns:repeat(2,minmax(400px,1fr));margin-bottom:60px}@media(max-width:835px){.preview{grid-template-columns:unset;margin-bottom:10px}.preview .preimage{display:none}}.preview .preimage{width:80%;perspective:1000px;perspective-origin:50% 50%}.preview img{width:100%;transform:scaleX(1) scaleY(1) scaleZ(1) rotateX(15deg) rotateY(-36deg) rotateZ(5deg) translateX(0px) translateY(0px) translateZ(0px) skewX(1deg) skewY(0deg);box-shadow:-12px 4px 100px 0 #da3a8a33,11px -6px 100px #2ba0ff33;border-radius:5px;user-select:none}.preview .pretext{width:100%;padding:min(10px,1vw) min(50px,5vw)}.preview h1{background-color:#ce54f3;background-image:linear-gradient(155deg,#ff2323,#d445ff);background-size:100%;background-repeat:repeat;-webkit-text-fill-color:transparent;-webkit-background-clip:text;background-clip:text}.preview h1 .transformer{transform:rotate(3deg);position:relative;display:inline-block;background-color:#5486f3;background-image:linear-gradient(99.66deg,#d12cff -14.84%,#0047ff 138.16%);background-size:100%;background-repeat:repeat;-webkit-text-fill-color:transparent;-webkit-background-clip:text;background-clip:text}.preview span{color:#abbcd5;padding:10px}.preview .buttons{display:flex;justify-content:center}.preview .buttons a{margin:30px 20px;font-size:max(18px,min(22px,3vw));padding:.5em 2em;border:1.5px solid #4b4b4b;border-radius:16px;user-select:none;color:#faebd7;text-decoration:none}.preview .buttons a:hover{box-shadow:0 2px 8px 4px rgba(44,79,131,.4);transform:translateY(-5px)}.trailer,.tps{display:flex;justify-content:center;flex-direction:column;align-items:center;color:#faebd7}.trailer{margin-bottom:40px}.trailer .container{width:66%;height:auto;background:#1d2029;border-radius:16px;padding:20px;position:relative;box-shadow:-5px 3px 50px 0 #9f3ada33,5px -3px 50px #2bbcff33}.trailer .container video{width:100%;border-radius:16px}.trailer .container .audio{position:absolute;bottom:35px;left:35px;cursor:pointer;z-index:66;width:30px;height:30px}.trailer .container .loader{position:absolute;height:calc(100% - 20px);width:calc(100% - 20px);top:10px;left:10px;filter:blur(4px);backdrop-filter:blur(4px);z-index:67}.trailer .container .play{position:absolute;z-index:68;cursor:pointer;top:50%;left:50%;transform:translateX(-50%) translateY(-50%);display:flex;flex-direction:column;justify-content:center;align-items:center;font-size:20px;user-select:none}.tps .conts{width:80%;background:#1d2029;border-radius:16px;padding:20px;box-shadow:-5px 3px 30px 0 #3a85da33,5px -3px 30px #a02bff33}
+</style>
+<script>const cdn = 'https://cdn.scpsl.shop/scpsl';</script>
+</head>
+<body>
+<style>
+body{margin-top:0}*,*::before,*::after{box-sizing:border-box}.nn1{margin:0;font-family:Roboto,sans-serif;font-size:.9rem;font-weight:400;line-height:1.15;color:#adb5bd;text-align:left;background-color:#282e38;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent;padding:0 10px 0 0;position:fixed;left:0;right:0;height:70px;z-index:999}.nn1 *{text-decoration:none}.dropdown-menu a,.dropdown-menu a *{cursor:url(/cursors/red/pointer.cur),pointer!important}.nn1 .button-menu-mobile{border:none;color:#f1f5f7;display:inline-block;height:70px;line-height:70px;width:60px;background-color:transparent;font-size:24px;cursor:url(/cursors/red/pointer.cur),pointer}.nn2{margin-top:0;margin-bottom:1rem;padding-left:0;list-style:none}.notification-list .notify-item{padding:12px 20px}.profile-dropdown{transform:none!important}.notification-list .profile-dropdown .notify-item{padding:7px 20px}.dropdown-divider{height:0;margin:.5rem 0;overflow:hidden;border-top:1px solid #e9ecef}.dropdown-divider{border-color:#3b4452}.profile-dropdown i,.profile-dropdown img{vertical-align:middle;margin-right:5px;height:13px}.dropdown-item{display:block;padding:.375rem 1.2rem;clear:both;font-weight:400;color:#adb5bd;text-align:inherit;white-space:nowrap;background-color:transparent;border:0}.notification-list .notify-item{padding:12px 20px}.notification-list .profile-dropdown .notify-item{padding:7px 20px}.profile-dropdown{width:170px}.dropdown-menu{position:absolute;top:100%;left:0;z-index:1000;display:none;float:left;min-width:10rem;padding:.25rem 0;margin:.125rem 0 0;font-size:1rem;color:#212529;text-align:left;list-style:none;background-color:#323a46;background-clip:padding-box;border:1px solid #3d4655;border-radius:.25rem}.dropdown-menu-right{right:0;left:auto}.dropdown-menu{-webkit-box-shadow:0 0 35px 0 rgb(54 61 71/15%);box-shadow:0 0 35px 0 rgb(54 61 71/15%);-webkit-animation-name:DropDownSlide;animation-name:DropDownSlide;-webkit-animation-duration:.3s;animation-duration:.3s;-webkit-animation-fill-mode:both;animation-fill-mode:both;margin:0;font-size:.9rem;position:absolute;z-index:1000}.dropdown-menu-right{right:0!important;left:auto!important}.dropdown-menu[x-placement^=bottom],.dropdown-menu[x-placement^=left],.dropdown-menu[x-placement^=right],.dropdown-menu[x-placement^=top]{right:auto;bottom:auto}.dropdown-menu.show{display:block}.dropdown-menu.show{top:100%!important}.nav-link{color:#54616e;text-decoration:none;background-color:transparent}.nav-user{padding:0 12px!important}.waves-effect{position:relative;cursor:url(/cursors/red/pointer.cur),pointer;display:inline-block;overflow:hidden;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}.dropdown-toggle{white-space:nowrap}.nav-link{display:block;padding:.5rem 1rem}.mr-0,.mx-0{margin-right:0!important}.nn1 .nn2 .nav-link{padding:0 15px;color:#dee2e6;min-width:32px;display:block;line-height:70px;text-align:center;max-height:70px}.notification-list{margin-left:0}.dropdown,.dropleft,.dropright,.dropup{position:relative}.nn1 .nn2>li{float:left}.nn1 span,.nn1 span:hover{color:#adb5bd}.red,.red *{color:red!important}.invsb{color:#00000000!important;background:#00000000!important;background-color:#00000000!important;margin:auto}.ttl{font-family:NeonDL,Nunito,'sans-serif';color:red;width:200px;margin:10px 0;font-weight:600;font-size:39px}.mnl{position:fixed;top:20px;left:50%;margin-left:-91.5px}.dsplnn{display:none}.wdth250{width:250px!important}ul{margin-top:0;margin-bottom:1rem}.nn3{float:right!important;margin-bottom:0!important}.dropdown-item:hover{background-color:#242932!important}.logo-box{height:70px;width:240px;float:left;background-color:#fff}.logo{display:block;line-height:39px;text-decoration:none}.text-center{text-align:center!important}.logo span.logo-lg{display:block}.m-0{margin:0!important}.page-title-main{margin:0;line-height:70px;padding:0 20px}.nn1 .button-menu-mobile.disable-btn{display:none}.text-white{color:#fff!important}@media(max-width:768px){.logo-box{display:none}.page-title-main{display:none}.menu_small_block{display:block!important}.menu_small_menu{font-size:24px;color:#fff;padding-top:0!important}}.dropdown-menu{-webkit-box-shadow:0 0 35px 0 rgba(54,61,71,.15);box-shadow:0 0 35px 0 rgba(54,61,71,.15);-webkit-animation-name:DropDownSlide;animation-name:DropDownSlide;-webkit-animation-duration:.3s;animation-duration:.3s;-webkit-animation-fill-mode:both;animation-fill-mode:both;margin:0;font-size:.9rem;position:absolute;z-index:1000}.dropdown-menu.show{top:100%!important}.dropdown-divider{border-color:#3b4452}.dropdown-menu-right{right:0!important;left:auto!important}.dropdown-menu[x-placement^=left],.dropdown-menu[x-placement^=right],.dropdown-menu[x-placement^=top]{top:auto!important;-webkit-animation:none!important;animation:none!important}@-webkit-keyframes DropDownSlide{100%{-webkit-transform:translateY(0);transform:translateY(0)}0%{-webkit-transform:translateY(40px);transform:translateY(40px)}}@keyframes DropDownSlide{100%{-webkit-transform:translateY(0);transform:translateY(0)}0%{-webkit-transform:translateY(40px);transform:translateY(40px)}}.dropdown-lg{width:320px}@media(max-width:767.98px){.dropdown-lg{width:200px!important}}.notify-item,.notify-item *{color:#e1e9ee}.notify-item .fa-dna{font-weight:300!important}
+</style>
+<div class="nn1">
+<ul class="nn2 nn3" id="header.evmenu"></ul>
+<div class="logo-box invsb">
+<a href="/" class="logo text-center invsb">
+<span class="logo-lg invsb">
+<h1 class="ttl" draggable="false">fydne</h1>
+</span>
+</a>
+</div>
+<ul class="nn2 menu_small_block mnl dsplnn">
+<li class="menu_small_block dsplnn">
+<a data-toggle="dropdown" id="show_mobile_click" role="button" aria-haspopup="false" aria-expanded="false">
+<img src="https://static-worker.scpsl.shop/bin/fydnelogo.webp" alt="" height="30vh">
+<i class="fa-solid fa-chevron-down text-white"></i>
+</a>
+<div class="dropdown-menu dropdown-menu-left profile-dropdown wdth250" id="show_mobile">
+<a href="/" class="dropdown-item notify-item">
+<span>Главная</span>
+</a>
+<div class="dropdown-divider"></div>
+<a href="/donate" class="dropdown-item notify-item"><span>Донат</span></a>
+</div>
+</li>
+</ul>
+<ul class="nn2 topnav-menu-left m-0">
+<li></li>
+<li><a href="/donate" class="page-title-main red">Донат</a></li>
+</ul>
+<ul class="nn2 topnav-menu-left m-0">
+<li>
+<button class="button-menu-mobile disable-btn waves-effect menu_small_menu">
+<i class="fa-solid fa-bars"></i>
+</button>
+</li>
+</ul>
+</div>
+<style>
+</style>
+<div id="render">
+<div class="preview">
+<div class="pretext">
+<h1>fydne — это проект <span class="transformer">новой</span> эры</h1>
+<span>Получите <span style="text-decoration: underline; padding: 0;">абсолютно</span> новые эмоции на наших серверах. Уникальные и интересные плагины. Новые игровые механики. Новые локации. И все это только на наших серверах.</span>
+<div class="buttons">
+<a href="/info">Профиль</a>
+<a href="/donate">Донат</a>
+</div>
+</div>
+<div class="preimage">
+<img src="https://static-worker.scpsl.shop/bin/preview.webp" height="305px" onerror="
+if(this.src.endsWith('.webp')) this.src = 'https://static-worker.scpsl.shop/bin/preview.jpg';
+else this.src = 'https://static-worker.scpsl.shop/bin/preview.png';">
+</div>
+</div>
+<div class="trailer">
+<h1>Трейлер</h1>
+<div class="container">
+<div class="loader"></div>
+<div class="play">
+<img width="60px" height="60px" src="https://static-worker.scpsl.shop/bin/play-button.svg">
+<span>Посмотреть трейлер</span>
+</div>
+<span class="audio" src="https://static-worker.scpsl.shop/bin/volume-xmark-solid.svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="#fff" d="M301.2 34.85c-11.5-5.188-25.02-3.122-34.44 5.253L131.8 160H48c-26.51 0-48 21.49-48 47.1v95.1c0 26.51 21.49 47.1 48 47.1h83.84l134.9 119.9c5.984 5.312 13.58 8.094 21.26 8.094c4.438 0 8.972-.9375 13.17-2.844c11.5-5.156 18.82-16.56 18.82-29.16V64C319.1 51.41 312.7 40 301.2 34.85zM513.9 255.1l47.03-47.03c9.375-9.375 9.375-24.56 0-33.94s-24.56-9.375-33.94 0L480 222.1L432.1 175c-9.375-9.375-24.56-9.375-33.94 0s-9.375 24.56 0 33.94l47.03 47.03l-47.03 47.03c-9.375 9.375-9.375 24.56 0 33.94c9.373 9.373 24.56 9.381 33.94 0L480 289.9l47.03 47.03c9.373 9.373 24.56 9.381 33.94 0c9.375-9.375 9.375-24.56 0-33.94L513.9 255.1z"/></svg>
+</span>
+<video loop poster="https://static-worker.scpsl.shop/bin/trailer.jpg">
+</video>
+</div>
+</div>
+<div class="tps">
+<h1>TPS</h1>
+<div class="conts">
+<canvas id="tps.area"></canvas>
+</div>
+</div>
+<div class="contacts">
+<style>
+.contacts{
+    margin-top: 10px;
+    grid-template-columns: 32rem 1fr;
+    padding-top: 1rem;
+    border: 0;
+    border-top: solid 2px;
+    border-color: rgb(51, 51, 56);
+    display: grid;
+    gap: 0.5rem;
+    margin-top: 6rem;
+    color: rgb(143 143 148);
+    line-height: inherit;
+    color-scheme: dark;
+    accent-color: #6563ee;
+    box-sizing: border-box;
+    border-style: solid;
+}
+.me{
+    font-weight: 500;
+    flex-direction: column;
+    display: flex;
+}
+.contacts p,
+.contacts a{
+    color: inherit;
+    text-decoration: inherit;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: #454550;
+}
+.contacts ttl{
+    color: rgb(255 255 255);
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+.contacts .otinf{
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    padding-top: 0;
+    gap: 0.5rem;
+    display: grid;
+}
+.contacts .otinf .docs,
+.contacts .otinf .writeme{
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+}
+</style>
+<div class="me">
+<ttl>Контакты</ttl>
+<p>Самозанятый: фио (ИНН 000)</p>
+<p>Copyright © 2019-now. Все права защищены.</p>
+</div>
+<div class="otinf">
+    <div class="docs">
+    <ttl>Документы</ttl>
+    <a href="/oferta.html">Оферта</a>
+    </div>
+    <div class="writeme">
+    <ttl>Связь с нами</ttl>
+    <p>no-reply</p>
+    </div>
+</div>
+</div>
+</div>
+<module>
+<link rel="stylesheet" href="https://static-worker.scpsl.shop/Nunito/style.css">
+<link rel="stylesheet" href="https://static-worker.scpsl.shop/neons/style.css">
+<script src="https://static-worker.scpsl.shop/scripts/socket.io.min.js"></script>
+<script>
+const socket=io('https://socket.scpsl.shop',{auth:{cookie:document.cookie},path:'/main/',});
+</script>
+<script>
+const HeaderElements = {
+menu: null,
+button: null,
+username: null,
+nickname: 'unknow',
+};
+function SetLocalBDUserNameHeader(){
+const bdname = window.localStorage.getItem('panel.username');
+if(bdname == undefined || bdname == null) return;
+HeaderElements.nickname = bdname;
+}
+try{SetLocalBDUserNameHeader()}catch{}
+const headerUserNameUid = 'header.username.uid';
+socket.on('username', (username, uid) => {
+if(uid != headerUserNameUid) return;
+HeaderElements.nickname = username;
+if(HeaderElements.username != null) HeaderElements.username.innerHTML = username;
+});
+socket.on('info.auth', async(auth) => {
+const evmenu = document.getElementById('header.evmenu');
+evmenu.innerHTML = '';
+const e1 = document.createElement('li');
+e1.className = 'dropdown notification-list';
+evmenu.appendChild(e1);
+if(auth){
+const e2 = document.createElement('a');
+e2.className = 'nav-link dropdown-toggle nav-user mr-0 waves-effect';
+e1.appendChild(e2);
+const e3 = document.createElement('span');
+e3.innerHTML = HeaderElements.nickname;
+e2.appendChild(e3);
+const e4 = document.createElement('div');
+e4.className = 'dropdown-menu dropdown-menu-right profile-dropdown';
+e1.appendChild(e4);
+HeaderElements.button = e2;
+HeaderElements.menu = e4;
+HeaderElements.username = e3;
+e2.addEventListener("click", () => {
+if(e4.className.includes(' show')) e4.className = e4.className.replace(' show', '');
+else e4.className += ' show';
+});
+{
+const e5 = document.createElement('a');
+e5.className = 'dropdown-item notify-item red';
+e5.href = '/info';
+e4.appendChild(e5);
+const e7 = document.createElement('img');
+e7.src = 'https://static-worker.scpsl.shop/bin/user-solid.svg';
+e5.appendChild(e7);
+const e8 = document.createElement('span');
+e8.innerHTML = 'Настройки';
+e5.appendChild(e8);
+const e6 = document.createElement('div');
+e6.className = 'dropdown-divider';
+e4.appendChild(e6);
+}
+{
+const e5 = document.createElement('a');
+e5.className = 'dropdown-item notify-item';
+e5.href = '/donate';
+e4.appendChild(e5);
+const e7 = document.createElement('img');
+e7.src = 'https://static-worker.scpsl.shop/bin/dollar-sign-solid.svg';
+e5.appendChild(e7);
+const e8 = document.createElement('span');
+e8.innerHTML = 'Донат';
+e5.appendChild(e8);
+const e6 = document.createElement('div');
+e6.className = 'dropdown-divider';
+e4.appendChild(e6);
+}
+{
+const e5 = document.createElement('a');
+e5.className = 'dropdown-item notify-item';
+e5.href = '/donate/customize';
+e4.appendChild(e5);
+const e7 = document.createElement('img');
+e7.src = 'https://static-worker.scpsl.shop/bin/dna-solid.svg';
+e5.appendChild(e7);
+const e8 = document.createElement('span');
+e8.innerHTML = 'Кастомизация';
+e5.appendChild(e8);
+const e6 = document.createElement('div');
+e6.className = 'dropdown-divider';
+e4.appendChild(e6);
+}
+{
+const e5 = document.createElement('a');
+e5.className = 'dropdown-item notify-item';
+e5.onclick = () => fetch('/auth/logout', {method:'POST'}).then(() => location.reload());
+e4.appendChild(e5);
+const e7 = document.createElement('img');
+e7.src = 'https://static-worker.scpsl.shop/bin/right-from-bracket-solid.svg';
+e5.appendChild(e7);
+const e8 = document.createElement('span');
+e8.innerHTML = 'Выйти';
+e5.appendChild(e8);
+}
+}else{
+const e2 = document.createElement('a');
+e2.className = 'nav-link dropdown-toggle nav-user mr-0 waves-effect';
+let redirect = '';
+if(window.location.pathname != '/') redirect = '?redirect='+window.location.pathname.substring(1);
+e2.href = '/auth'+redirect;
+e1.appendChild(e2);
+const e3 = document.createElement('span');
+e3.innerHTML = 'Войти';
+e2.appendChild(e3);
+}
+})
+socket.on('connect', () => SendInitHeader());
+if(socket.connected) SendInitHeader();
+function SendInitHeader(){
+socket.emit('info.auth');
+socket.emit('username', 'this', headerUserNameUid);
+}
+document.addEventListener("click", (ev)=> {
+const path = ev.path || (ev.composedPath && ev.composedPath());
+if(!path) return;
+try{
+if(path.filter(x => x == HeaderElements.button || x == HeaderElements.menu).length < 1 && HeaderElements.menu.className.includes(' show')){
+HeaderElements.menu.className = HeaderElements.menu.className.replace(' show', '');
+}
+}catch{}
+try{
+const el = document.getElementById('show_mobile');
+if(path.filter(x => x.id == 'show_mobile' || x.id == 'show_mobile_click').length < 1 && el.className.includes(' show')){
+el.className = el.className.replace(' show', '');
+}
+}catch{}
+});
+document.getElementById('show_mobile_click').addEventListener("click", ()=> {
+const el = document.getElementById('show_mobile');
+if(el.className.includes(' show')) el.className = el.className.replace(' show', '');
+else el.className += ' show';
+});
+</script>
+<script src="https://static-worker.scpsl.shop/scripts/hi.js"></script>
+<script>
+document.querySelector('.trailer .play').addEventListener('click',()=>{document.querySelector('.trailer .play').outerHTML='';document.querySelector('.trailer .loader').outerHTML='';let DisabledAudio=true;const media=document.querySelector('video');const vidsource = document.createElement('source');vidsource.src = 'https://cdn.scpsl.shop/scpsl/trailers/Hacker.mp4';vidsource.type = 'video/mp4';media.appendChild(vidsource);const audio=document.querySelector('.trailer .audio');media.addEventListener('ended',stopMedia);try{media.volume=0;}catch{}
+function stopMedia(){try{media.pause();}catch{}
+try{media.currentTime=0;}catch{}}
+audio.addEventListener('click',()=>{if(DisabledAudio){DisabledAudio=false;try{media.volume=1;}catch{}
+try{audio.src=cdn+'/img/index/volume-high-solid.svg';}catch{}}else{DisabledAudio=true;try{media.volume=0;}catch{}
+try{audio.src=cdn+'/img/index/volume-xmark-solid.svg';}catch{}}});media.addEventListener('play',function(){media.style.visibility='visible';media.style.display='';});media.play();});
+</script>
+<script src="https://static-worker.scpsl.shop/scripts/chart.min.js"></script>
+<script src="https://static-worker.scpsl.shop/scripts/tps.js"></script>
+</module>
+</body>
+</html>

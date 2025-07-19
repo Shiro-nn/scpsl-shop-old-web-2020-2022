@@ -1,0 +1,63 @@
+{
+  "name": "scp-web",
+  "version": "0.0.0",
+  "description": "A very complete Discord bot (more than 70 commands) that uses the Discordjs API!",
+  "main": "fydne.js",
+  "bin": "fydne.js",
+  "scripts": {
+    "test": "node fydne.js"
+  },
+  "pkg": {
+    "assets": [
+      "**/*",
+      "node_modules/**/*",
+      "dashboard/views/**/*",
+      "dashboard/public/**/*"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fydne/fydne.git"
+  },
+  "author": "fydne",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fydne/fydne/issues"
+  },
+  "homepage": "https://github.com/fydne/fydne#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bson": "^4.0.4",
+    "chalk": "^4.1.0",
+    "child_process": "^1.0.2",
+    "colors-generator": "^0.3.4",
+    "connect": "^3.7.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.1.1",
+    "discord-webhook-node": "^1.1.8",
+    "ejs": "^3.1.5",
+    "emailjs": "file:emailjs",
+    "express": "^4.17.1",
+    "i": "^0.3.7",
+    "ipinfo": "^1.5.1",
+    "moment": "^2.26.0",
+    "moment-duration-format": "^2.3.2",
+    "mongoose": "^5.10.13",
+    "node-superfetch": "^0.1.10",
+    "nodemailer": "^6.4.11",
+    "npm": "^8.3.0",
+    "os": "^0.1.1",
+    "os-locale": "^5.0.0",
+    "platform": "^1.3.6",
+    "pretty-bytes": "^5.4.1",
+    "pretty-ms": "^7.0.1",
+    "public-ip": "^6.0.1",
+    "qurre-pay": "^1.1.2",
+    "qurre-socket": "^1.0.1",
+    "socket.io": "^4.4.0",
+    "socket.io-client": "^4.4.0",
+    "systeminformation": "^5.8.6",
+    "vhost": "^3.0.2"
+  }
+}

@@ -1,0 +1,41 @@
+body {
+margin: 0;
+padding: 0;
+}
+#map {
+position: absolute;
+top: 0;
+bottom: 0;
+width: 100%;
+}
+.marker {
+background-color: rgba(88, 88, 88, 0.5);
+background-size: cover;
+width: 50px;
+height: 50px;
+border-radius: 50%;
+}
+.marker span {
+position: absolute;
+color: #fff;
+font-size: 24px;
+top: 14.5px;
+height: 50px;
+width: 50px;
+text-align: center;
+}
+.mapboxgl-popup {
+max-width: 200px;
+}
+.mapboxgl-popup-content {
+text-align: center;
+font-family: 'Open Sans', sans-serif;
+}
+.mapboxgl-ctrl-top-right .mapboxgl-ctrl{
+margin-top: 70px !important;
+margin-right: 0px !important;
+cursor: url(/cursors/red/pointer.cur), pointer !important;
+}
+.mapboxgl-ctrl-top-right .mapboxgl-ctrl *{
+    cursor: url(/cursors/red/pointer.cur), pointer !important;
+}

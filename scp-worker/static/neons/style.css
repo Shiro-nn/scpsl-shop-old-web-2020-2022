@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'NeonDL';
+    src: url('./NeonDL.eot');
+    src: url('./NeonDL.eot?#iefix') format('embedded-opentype'),
+         url('./NeonDL.woff') format('woff'),
+         url('./NeonDL.ttf') format('truetype'),
+         url('./NeonDL.svg#NeonDL') format('svg');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+@font-face {
+    font-family: 'NeonOL';
+    src: url('./NeonOL.eot');
+    src: url('./NeonOL.eot?#iefix') format('embedded-opentype'),
+         url('./NeonOL.woff') format('woff'),
+         url('./NeonOL.ttf') format('truetype'),
+         url('./NeonOL.svg#NeonOL') format('svg');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+@font-face {
+    font-family: 'Nickainley';
+    src: url('./Nickainley.eot');
+    src: url('./Nickainley.eot?#iefix') format('embedded-opentype'),
+         url('./Nickainley.woff') format('woff'),
+         url('./Nickainley.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+@font-face {
+    font-family: 'OwnHand';
+    src: url('./OwnHand.eot');
+    src: url('./OwnHand.eot?#iefix') format('embedded-opentype'),
+         url('./OwnHand.woff') format('woff'),
+         url('./OwnHand.ttf') format('truetype'),
+         url('./OwnHand.svg') format('svg');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+@font-face {
+    font-family: 'IronRussian';
+    src: url('./IronRussian.eot');
+    src: url('./IronRussian.eot?#iefix') format('embedded-opentype'),
+         url('./IronRussian.woff') format('woff'),
+         url('./IronRussian.ttf') format('truetype'),
+         url('./IronRussian.svg#IronRussian') format('svg');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}

@@ -1,0 +1,12 @@
+User-agent: AdsBot-Google
+Disallow: /
+
+User-agent: nsa
+Disallow: /
+
+User-agent: *
+Allow: /
+Disallow: /api
+Disallow: /api/
+Disallow: /inv
+Disallow: /inv/

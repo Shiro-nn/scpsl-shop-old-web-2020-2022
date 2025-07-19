@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Клановые войны">
+        <meta name="author" content="fydne">
+        <title>fydne | Клановые войны</title>
+        <script type="module" src="/js/all.js"></script>
+
+        <meta property="og:title" content="Клановые войны" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://scpsl.store" />
+        <meta property="og:image" content="https://scpsl.store/img/etc/fydne.png" />
+        <meta property="og:description" content="fydne - уникальный проект со своими плагинами, тёплым комьюнити и хорошей администрацией" />
+        <meta name="theme-color" content="#ff0000">
+
+        <link rel="icon" type="image/ico" href="/img/etc/fydne.png" />
+        <link rel="stylesheet" href="/css/clans/wars/list.css">
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/custom_style.css?fix=.css">
+        <link rel="stylesheet" href="<%= cdn_host %>/scpsl.store/css/font-awesome.min.css">
+    </head>
+    <body>
+        <%- include('../../modules/socketInit') %>
+        <div id="wrapper" class="wars_list">
+            <%- include('../../modules/header') %>
+            <div class="w-1">
+                <div class="w0">
+                    <div class="w1">
+                        <div class="w2">
+                            <%/*
+                            wars.forEach(war => { %>
+                            <li class="w3">
+                                <a class="w-link" href="/clans/<%= war.tag %>"></a>
+                                <div class="w4" <%- `style="border-bottom-color: ${war.color};"` %>>
+                                    <div class="w5">
+                                        <div class="w51" style="background-image: url('<%= war.img %>');"></div>
+                                    </div>
+                                    <div class="w6">
+                                        <a class="w7"><span><%= war.name %></span></a>
+                                        <a class="w8">
+                                            <span class="w9"><%= war.tag %></span>
+                                            <div class="w10" <%- `style="background-color: ${war.color};"` %>></div>
+                                        </a>
+                                        <a class="w11">
+                                            <i class="fa-solid fa-user w12"></i>
+                                            <span><%= war.users.length %></span>
+                                        </a>
+                                        <div class="w13"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <% });*/ %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include('../../modules/invite') %>
+    </body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <%- include('../modules/meta', {embedName:'fydne', metaTitle:'fydne | Информация', metaDesc:'Информация'}) %>
+        <link href="<%= cdn_host %>/scpsl.store/css/app.min.css" rel="stylesheet" type="text/css">
+        <link href="<%= cdn_host %>/scpsl.store/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="/css/etc/settings.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="/css/etc/rainbow.css">
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/custom_style.css?fix=.css">
+        <link rel="stylesheet" href="<%= cdn_host %>/scpsl.store/css/font-awesome.min.css">
+    </head>
+    <body class="topbar-dark left-side-menu-dark pace-done">
+        <%- include('../modules/socketInit') %>
+        <div id="wrapper">
+            <%- include('../modules/header') %>
+            <%- include('../modules/panel') %>
+            <div class="content-page">
+                <div class="content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-header">Сборка админки</div>
+                                    <br>
+                                    <% ddata.forEach(data => {
+                                        let force = '';
+                                        let give = '';
+                                        let effects = '';
+                                        let players_roles = '';
+                                        const server = Servers.GetById(data.server);
+                                        let available = '';
+                                        if(data.force) available += '\nФорс,';
+                                        if(data.give) available += '\nВыдача предметов,';
+                                        if(data.effects) available += '\nЭффекты,';
+                                        if(data.players_roles) available += '\nПросмотр игроков,';
+                                        if(available != '') available = `Доступно: ${available}`;
+                                        if(available.substr(available.length - 1) == ',') available = available.substring(0, available.length - 1);
+                                        const style_color = `style="color:${data.color}"`; %>
+                                        <div class="col-md-12 col-md-auto bypass_col" id="back=><%-data._id%>">
+                                            <div class="card-box card-border">
+                                                <div class="row">
+                                                    <div class="cell col-3">
+                                                        <div style="margin-top:2px">
+                                                            <h1 class="roles" <%-style_color%>><%= data.prefix.charAt(0) %></h1>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell col-8">
+                                                        <div class="text-center mb-0 font-16 border-0 ml-0" style="width:155px;color:#fff;overflow-wrap:break-word">
+                                                            <span class="s"><%= data.prefix %></span>
+                                                            <br><span class="s">Сервер: <%= server %></span>
+                                                            <br><span class="s">Истекает: <%= data.to %></span>
+                                                            <br><span class="s"><%= available %></span>
+                                                            <button class="btn btn-bordred-danger mt-1 MoneyBackClick" id="<%-data._id%>">Вернуть средства</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <% }); %>
+                                </div>
+                            </div>
+
+
+
+                            
+                            
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-header">Готовые роли</div>
+                                    <br>
+                                    <% rdata.forEach(role => {
+                                        const server = Servers.GetById(role.server);
+                                        const _role = Roles.find(x => x.id == role.id);
+                                        const style_color = `style="color:${_role.color}"`;%>
+                                        <div class="col-md-12 col-md-auto bypass_col" id="freeze=><%-role._id%>">
+                                            <div class="card-box card-border">
+                                                <div class="row">
+                                                    <div class="cell col-3">
+                                                        <div style="margin-top:2px">
+                                                            <%if(role.id == 1){%>
+                                                                <h1 class="roles rainbow">R</h1>
+                                                            <%}else{%>
+                                                            <h1 class="roles" <%-style_color%>><%= _role.name.charAt(0) %></h1>
+                                                            <%}%>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell col-8">
+                                                        <div class="text-center mb-0 font-16 border-0 ml-0" style="width:155px;color:#fff;overflow-wrap:break-word">
+                                                            <span class="s"><%= _role.name %></span>
+                                                            <br><span class="s">Сервер: <%= server %></span>
+                                                            <br><span class="s">Истекает:<br><RF-date-convert>[нет данных]</RF-date-convert></span>
+                                                            <button class="btn mt-1 RFClick hideRF" id="<%-role._id%>"></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <% }); %>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-md-4">
+                                <div class="card" id="info.stats"></div>
+                            </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="MoneyBack" style="display: none;" class="modal fade bs-example-modal-center show mb">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header mb-0">
+                        <h4 class="modal-title">Вернуть средства за донат</h4>
+                        <button type="button" class="close p" data-dismiss="modal" id="MoneyBackClose">×</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-lg-12 mb-0">
+                            <span class="s">Вы уверены, что хотите вернуть средства за <umm id="MoneyBackDonate"></umm>?</span><br>
+                            <span class="s">На ваш баланс вернется <umm id="MoneyBackSum"></umm>₽</span><br>
+                            <button id="MoneyBackSubmit" class="btn btn-bordred-danger mt-1">Вернуть средства</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="RF" style="display: none;" class="modal fade bs-example-modal-center show mb">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header mb-0">
+                        <h4 class="modal-title"><null id="RF1">Заморозить</null> <null id="RF4">роль</null></h4>
+                        <button type="button" class="close p" data-dismiss="modal" id="RFC">×</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-lg-12 mb-0">
+                            <span class="s">Вы уверены, что хотите <null id="RF2">заморозить</null> <null id="RF5">null</null>?</span><br>
+                            <button id="RF3" class="btn btn-bordred-warning mt-1">Заморозить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include('../modules/invite') %>
+        <%- include('../modules/waiting') %>
+        <script src="<%= cdn_host %>/scpsl.store/js/jquery/jquery.min.js"></script>
+        <script src="<%= cdn_host %>/scpsl.store/js/slimscroll.min.js"></script>
+        <script src="<%= cdn_host %>/scpsl.store/js/app.js"></script>
+        <script src="/js/modules/date-convert.js"></script>
+        <script src="/js/settings/MoneyBack.js"></script>
+        <script src="/js/settings/RoleFreeze.js"></script>
+        <script src="/js/render/info.js"></script>
+    </body>
+</html>
